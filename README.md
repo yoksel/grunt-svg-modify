@@ -75,33 +75,23 @@ If SVG-element has fills, these fills will not be replaced.
 {
     "variations": {
         "arrow-up": [{
-              "width": "40"
+              "width": "40" // ---> arrow-up--w40.svg
             }, {
               "height": "120",
-              "color": "orange"
+              "color": "orange" // ---> arrow-up--h120--orange.svg
             }, {
-              "color": "gold"
+              "color": "gold" // ---> arrow-up--gold.svg
         }],
         "home": [{
-              "width": "100"
+              "width": "100" // ---> home--w100.svg
             }, {
               "height": "70",
-              "color": "pink"
+              "color": "pink" // home--h100--pink.svg
             }, {
-              "color": "yellowgreen"
+              "color": "yellowgreen" // ---> home--yellowgreen.svg
         }]
     }
 }
-```
-
-This'll create a number of variations with names like these:
-
-```html
-arrow-up--w40.svg
-arrow-up--w120--orange.svg
-arrow-up--gold.svg
-home--w100.svg
-...
 ```
 
 #### Combo (all modifications in one file):
