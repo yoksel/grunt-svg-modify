@@ -37,13 +37,13 @@ grunt.initConfig({
 
 ### Configure with json:
 
-Create config.json and place it to the folder with your SVG-images.
+Create **config.json** and place it to the folder with your SVG-images.
 
-Variations of config.json see below:
+Variations of **config.json** see below:
 
 #### Colorize:
 
-For transparent icons only!
+For transparent images only!
 
 If SVG-element has fills, these fills will not be replaced.
 
