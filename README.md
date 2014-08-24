@@ -94,5 +94,55 @@ If SVG-element has fills, these fills will not be replaced.
 }
 ```
 
+This'll create a number of variations with names like these:
+
+```html
+arrow-up--w40.svg
+arrow-up--w120--orange.svg
+arrow-up--gold.svg
+home--w100.svg
+...
+```
+
+#### Combo (all modifications in one file):
+
+```js
+{
+    "defaultColor": "blue", // <--- Set color
+
+    "defaults": { // <--- 1. Defaults will be processed first
+        "home": {
+            "width": "123"
+        },
+        "remove": {
+            "height": "32",
+            "color": "teal"
+        }
+    },
+
+    "variations": { // <--- 2. Then will be processed variations
+        "arrow-up": [{
+                "width": "40"
+            }, {
+                "width": "120",
+                "color": "gold"
+            }, {
+                "color": "yellow"
+        }],
+        "home": [{
+                "width": "100"
+            }, {
+                "width": "70",
+                "color": "crimson"
+            }, {
+                "width": "20",
+                "color": "gray"
+            }, {
+                "color": "green"
+        }]
+    }
+}
+```
+
 ## Release History
 _(Nothing yet)_
