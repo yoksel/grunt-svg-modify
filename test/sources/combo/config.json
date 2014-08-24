@@ -1,0 +1,33 @@
+{
+    "defaultColor": "blue",
+    "defaults": {
+        "home": {
+            "width": "123"
+        },
+        "remove": {
+            "height": "32",
+            "color": "teal"
+        }
+    },
+    "variations": {
+        "arrow-up": [{
+            "width": "40"
+        }, {
+            "width": "120",
+            "color": "gold"
+        }, {
+            "color": "yellow"
+        }],
+        "home": [{
+            "width": "100"
+        }, {
+            "width": "70",
+            "color": "crimson"
+        }, {
+            "width": "20",
+            "color": "gray"
+        }, {
+            "color": "green"
+        }]
+    }
+}

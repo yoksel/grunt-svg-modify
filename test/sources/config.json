@@ -1,0 +1,12 @@
+{
+    "defaultColor": "violet",
+    "defaults": {
+        "home": {
+            "width": "200"
+        },
+        "remove": {
+            "height": "50",
+            "color": "orangered"
+        }
+    }
+}

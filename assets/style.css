@@ -1,0 +1,64 @@
+BODY {
+    font: 16px/1.4 "Trebuchet MS", Arial, sans-serif;
+    }
+
+A {
+    color: tomato;
+    }
+
+H1 {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #CCC;
+    font: 3em/1.4 Georgia, serif;
+    text-align: center;
+    }
+
+H4 {
+    margin-bottom: .4em;
+    font: 2em/1.4 Georgia, serif;
+    color: steelblue;
+    }
+
+H5 {
+    font-size: 1em;
+    font-weight: normal;
+    }
+
+P {
+    margin: 1.5rem 0;
+    }
+UL {
+    padding: 0;
+    }
+LI {
+    list-style: none;
+    }
+
+.wrapper {
+    width: 650px;
+    margin: 4rem auto;
+    }
+
+.color {
+    display: inline-block;
+    width: 50px;
+    height: 1.2em;
+    vertical-align: top;
+    border: 2px solid #DDD;
+    }
+.sizes {
+    padding: 0 3px;
+    background: #DDD;
+    font-size: .9em;
+    }
+
+.svg-item {
+    display: inline-block;
+    position: relative;
+    margin: 0 2em 2em 0;
+    }
+svg {
+    display: block;
+    border: 1px solid #DDD;
+    }

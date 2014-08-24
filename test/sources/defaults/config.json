@@ -1,0 +1,11 @@
+{
+    "defaults": {
+        "arrow-up": {
+            "width": "200"
+        },
+        "home": {
+            "height": "50",
+            "color": "pink"
+        }
+    }
+}
