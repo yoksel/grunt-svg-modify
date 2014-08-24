@@ -22,7 +22,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // Before generating any new files, remove any previously-created files.
         clean: {
             temp: ["temp"],
             result: ['test/result']
@@ -70,7 +69,6 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
     grunt.registerTask('default', ['svg_modify', "clean:temp"]);
 
