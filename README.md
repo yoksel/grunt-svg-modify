@@ -19,17 +19,15 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-svg-modify');
 ```
 
-## The "svg_modify" task
+## Usage
 
-### Usage Examples
-
-#### Task:
+### Task:
 
 ```js
 grunt.initConfig({
-  svg_fallback: {
-       your_target: {
-            cwd: "cwd/", // <--- Folder for sources and results
+    svg_fallback: {
+        your_target: {
+            cwd: "cwd/", // <--- Folder with sources and results
             src: "sources/", // <--- Subfolders will be processed too
             dest: "result/" // <--- All processed folders wiil be placed here
         }
@@ -37,9 +35,64 @@ grunt.initConfig({
 });
 ```
 
-#### Configure with json:
+### Configure with json:
 
-Use json file to set rules for processing folders. Create config.json and place it to the folder with your SVG-images.
+Create config.json and place it to the folder with your SVG-images.
+
+Variations of config.json see below:
+
+#### Colorize:
+
+For transparent icons only!
+
+If SVG-element has fills, these fills will not be replaced.
+
+```js
+{
+    "defaultColor": "hotpink"
+}
+```
+
+#### Resize and colorize images (without renaming):
+
+```js
+{
+    "defaults": {
+        "arrow-up": {
+            "width": "200" // <--- height will be setted automatically
+        },
+        "home": {
+            "height": "50", // <--- width will be setted automatically
+            "color": "skyblue" //  <--- this override 'defaultColor'
+        }
+    }
+}
+```
+
+#### Make variations of one file:
+
+```js
+{
+    "variations": {
+        "arrow-up": [{
+              "width": "40"
+            }, {
+              "height": "120",
+              "color": "orange"
+            }, {
+              "color": "gold"
+        }],
+        "home": [{
+              "width": "100"
+            }, {
+              "height": "70",
+              "color": "pink"
+            }, {
+              "color": "yellowgreen"
+        }]
+    }
+}
+```
 
 ## Release History
 _(Nothing yet)_
