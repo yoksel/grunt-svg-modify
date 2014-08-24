@@ -2,6 +2,8 @@
 
 > Resize and color svg-images
 
+Modify SVG by JSON.
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
@@ -18,6 +20,26 @@ grunt.loadNpmTasks('grunt-svg-modify');
 ```
 
 ## The "svg_modify" task
+
+### Usage Examples
+
+#### Task:
+
+```js
+grunt.initConfig({
+  svg_fallback: {
+       your_target: {
+            cwd: "cwd/", // <--- Folder for sources and results
+            src: "sources/", // <--- Subfolders will be processed too
+            dest: "result/" // <--- All processed folders wiil be placed here
+        }
+    }
+});
+```
+
+#### Configure with json:
+
+Use json file to set rules for processing folders. Create config.json and place it to the folder with your SVG-images.
 
 ## Release History
 _(Nothing yet)_
