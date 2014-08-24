@@ -1,6 +1,6 @@
 # grunt-svg-modify
 
-> Resize and color svg-imageses
+> Resize and color svg-images
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
