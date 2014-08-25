@@ -39,7 +39,9 @@ LI {
     width: 650px;
     margin: 4rem auto;
     }
-
+.color-wrapper {
+    margin-bottom: 2em;
+    }
 .color {
     display: inline-block;
     width: 50px;

@@ -31,7 +31,7 @@ module.exports = function(grunt) {
             return pathArray[pathArray.length - 2];
         }
 
-        function createControlPage(dest, folderName) {
+        function createControlPage(dest, folderName, color) {
 
             var folderPath = dest + folderName;
             var files = grunt.file.expand(folderPath + "**/*.svg");
@@ -47,6 +47,7 @@ module.exports = function(grunt) {
 
             resultSvg.push({
                 "name": folderName,
+                "color": color,
                 "content": svgs
             });
 
@@ -87,45 +88,46 @@ module.exports = function(grunt) {
 
             var defaults = folderOptionsFile["defaults"];
             var variations = folderOptionsFile["variations"];
+            var color = folderOptionsFile["defaultColor"];
 
             if (defaults && variations) {
 
                 // 1. defaults
                 changesParams["inputFolder"] = folderPath;
                 changesParams["outputFolder"] = "temp/";
-                changesParams["folderOptions"] = folderOptionsFile["defaults"];
+                changesParams["folderOptions"] = defaults;
 
                 svgmodify.makeChanges(changesParams);
 
                 // 2. variations
                 changesParams["inputFolder"] = "temp/" + folderName;
                 changesParams["outputFolder"] = dest;
-                changesParams["folderOptions"] = folderOptionsFile["variations"];
+                changesParams["folderOptions"] = variations;
 
                 // colorize after setting defaults
-                if (folderOptionsFile["defaultColor"]) {
-                    changesParams["defaultColor"] = folderOptionsFile["defaultColor"];
+                if (color) {
+                    changesParams["defaultColor"] = color;
                 }
 
                 svgmodify.makeChanges(changesParams);
 
             } else {
 
-                if (folderOptionsFile["defaultColor"]) {
-                    changesParams["defaultColor"] = folderOptionsFile["defaultColor"];
+                if (color) {
+                    changesParams["defaultColor"] = color;
                 }
 
-                if (folderOptionsFile["defaults"]) {
-                    folderOptions = folderOptionsFile["defaults"];
-                } else if (folderOptionsFile["variations"]) {
-                    folderOptions = folderOptionsFile["variations"];
+                if (defaults) {
+                    folderOptions = defaults;
+                } else if (variations) {
+                    folderOptions = variations;
                 }
                 changesParams["folderOptions"] = folderOptions;
                 svgmodify.makeChanges(changesParams);
 
             }
 
-            createControlPage(dest, folderName);
+            createControlPage(dest, folderName, color);
 
         }
 
