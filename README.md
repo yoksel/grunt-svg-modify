@@ -135,4 +135,5 @@ If SVG-element has fills, these fills will not be replaced.
 ```
 
 ## Release History
-_(Nothing yet)_
+
+0.0.4 - Now fill color correctly overrides by config

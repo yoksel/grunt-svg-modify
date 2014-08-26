@@ -5,28 +5,33 @@
             "width": "123"
         },
         "remove": {
-            "height": "32"
+            "height": "150",
+            "color": "yellowgreen"
         }
     },
     "variations": {
         "arrow-up": [{
-            "width": "40"
-        }, {
-            "width": "120",
-            "color": "gold"
-        }, {
-            "color": "yellow"
+                "width": "40"
+            }, {
+                "width": "120",
+                "color": "gold"
+            }, {
+                "color": "yellow"
         }],
         "home": [{
-            "width": "100"
-        }, {
-            "width": "70",
-            "color": "crimson"
-        }, {
-            "width": "20",
-            "color": "gray"
-        }, {
-            "color": "green"
+                "width": "100"
+            }, {
+                "width": "70",
+                "color": "crimson"
+            }, {
+                "width": "20",
+                "color": "gray"
+            }, {
+                "color": "green"
+        }],
+        "remove": [{
+            "height": "100",
+            "color": "red"
         }]
     }
 }

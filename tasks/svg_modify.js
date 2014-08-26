@@ -39,7 +39,6 @@ module.exports = function(grunt) {
             var resultSvg = [];
 
             files.forEach(function(filePath) {
-                console.log(filePath);
                 var fileContent = grunt.file.read(filePath);
                 var fileName = path.basename(filePath);
                 svgs += "<span class=\"svg-item\"><b>" + fileName + "</b>" + fileContent + "</span>";
@@ -90,6 +89,11 @@ module.exports = function(grunt) {
             var variations = folderOptionsFile["variations"];
             var color = folderOptionsFile["defaultColor"];
 
+            // colorize after setting defaults
+            if (color) {
+                changesParams["defaultColor"] = color;
+            }
+
             if (defaults && variations) {
 
                 // 1. defaults
@@ -103,19 +107,11 @@ module.exports = function(grunt) {
                 changesParams["inputFolder"] = "temp/" + folderName;
                 changesParams["outputFolder"] = dest;
                 changesParams["folderOptions"] = variations;
-
-                // colorize after setting defaults
-                if (color) {
-                    changesParams["defaultColor"] = color;
-                }
+                changesParams["defaultColor"] = "";
 
                 svgmodify.makeChanges(changesParams);
 
             } else {
-
-                if (color) {
-                    changesParams["defaultColor"] = color;
-                }
 
                 if (defaults) {
                     folderOptions = defaults;
