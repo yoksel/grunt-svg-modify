@@ -107,7 +107,7 @@ module.exports = function(grunt) {
                 changesParams["inputFolder"] = "temp/" + folderName;
                 changesParams["outputFolder"] = dest;
                 changesParams["folderOptions"] = variations;
-                changesParams["defaultColor"] = "";
+                // changesParams["defaultColor"] = "";
 
                 svgmodify.makeChanges(changesParams);
 
