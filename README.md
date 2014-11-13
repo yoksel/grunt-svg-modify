@@ -21,19 +21,32 @@ grunt.loadNpmTasks('grunt-svg-modify');
 
 ## Usage
 
-### Task:
+### The "svg_modify" Task:
 
 ```js
 grunt.initConfig({
-    svg_fallback: {
+    svg_modify: {
+        options: {
+            // global options
+        },
         your_target: {
             cwd: "cwd/", // <--- Folder with sources and results
             src: "sources/", // <--- Subfolders will be processed too
-            dest: "result/" // <--- All processed folders wiil be placed here
+            dest: "result/", // <--- All processed folders wiil be placed here
+            options: {
+                // your_target specific options
+            }
         }
     }
 });
 ```
+
+**options.previewFile**
+
+Type: `Boolean`
+Default value: `"true"`
+
+Choose whether or not you want to create and open a preview html file
 
 ### Configure with json:
 
@@ -135,5 +148,5 @@ If SVG-element has fills, these fills will not be replaced.
 ```
 
 ## Release History
-
+0.0.7 - Added options & option to not create / open preview file
 0.0.4 - Now fill color correctly overrides by config
