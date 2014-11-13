@@ -28,6 +28,9 @@ module.exports = function(grunt) {
         },
 
         svg_modify: {
+            options: {
+                previewFile: false
+            },
             noconfig: {
                 cwd: "test/",
                 src: "sources/noconfig/",
@@ -36,7 +39,10 @@ module.exports = function(grunt) {
             colorize: {
                 cwd: "test/",
                 src: "sources/colorize/",
-                dest: "result/"
+                dest: "result/",
+                options: {
+                    previewFile: false
+                },
             },
             defaults: {
                 cwd: "test/",
@@ -46,12 +52,18 @@ module.exports = function(grunt) {
             variations: {
                 cwd: "test/",
                 src: "sources/variations/",
-                dest: "result/"
+                dest: "result/",
+                options: {
+                    previewFile: true
+                },
             },
             combo: {
                 cwd: "test/",
                 src: "sources/combo/",
-                dest: "result/"
+                dest: "result/",
+                options: {
+                    previewFile: true
+                },
             },
             // sources: {
             //     cwd: "test/",
