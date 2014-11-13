@@ -149,4 +149,5 @@ If SVG-element has fills, these fills will not be replaced.
 
 ## Release History
 0.0.7 - Added options & option to not create / open preview file
+
 0.0.4 - Now fill color correctly overrides by config
