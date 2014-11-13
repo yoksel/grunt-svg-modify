@@ -22,9 +22,10 @@ module.exports = function(grunt) {
             dest = cwd + this.data.dest,
             currentFolder = __dirname,
             templatesFolder = path.resolve(currentFolder, "../templates"),
-            assetsFolder = path.resolve(currentFolder, "../assets");
-
-
+            assetsFolder = path.resolve(currentFolder, "../assets"),
+            options = this.options({
+                previewFile: true
+            });
 
         function getFolder(filePath) {
             var pathArray = filePath.split(path.sep);
@@ -123,7 +124,7 @@ module.exports = function(grunt) {
 
             }
 
-            createControlPage(dest, folderName, color);
+            if(options.previewFile) createControlPage(dest, folderName, color);
 
         }
 
