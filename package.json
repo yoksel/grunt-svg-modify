@@ -1,7 +1,7 @@
 {
     "name": "grunt-svg-modify",
     "description": "Resize and color svg-images",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "homepage": "https://github.com/yoksel/grunt-svg-modify",
     "author": {
         "name": "yoksel",
