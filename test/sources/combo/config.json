@@ -1,6 +1,9 @@
 {
     "defaultColor": "blue",
     "defaults": {
+        "arrow-up": {
+            "color": "hotpink"
+        },
         "home": {
             "width": "123",
             "color": "pink"
@@ -11,14 +14,6 @@
         }
     },
     "variations": {
-        "arrow-up": [{
-            "width": "40"
-        }, {
-            "width": "120",
-            "color": "gold"
-        }, {
-            "color": "yellow"
-        }],
         "home": [{
             "width": "100"
         }, {
@@ -30,7 +25,7 @@
         }, {
             "color": "green"
         }],
-        "remove": [{
+        "arrow-up": [{
             "height": "100",
             "color": "red"
         }]

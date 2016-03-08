@@ -83,6 +83,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.registerTask('default', ['svg_modify', "clean:temp"]);
+    grunt.registerTask('combo', ['svg_modify:combo', "clean:temp"]);
 
     // By default, lint and run all tests.
     grunt.registerTask('lint', ['jshint']);
