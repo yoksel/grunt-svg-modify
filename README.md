@@ -1,4 +1,4 @@
-# grunt-svg-modify
+# [NOT SUPPORTED] grunt-svg-modify
 
 > Resize and color svg-images
 
